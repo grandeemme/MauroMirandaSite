@@ -1,24 +1,8 @@
 
 .DS_Store
 
-MauroMiranda.esproj/user.mauro.espressostorage
-
-MauroMiranda.esproj/Project.espressostorage
+MauroMiranda.esproj
 
 .project
 
-.idea/.name
-
-.idea/MauroMiranda.iml
-
-.idea/encodings.xml
-
-.idea/misc.xml
-
-.idea/modules.xml
-
-.idea/scopes/scope_settings.xml
-
-.idea/vcs.xml
-
-.idea/workspace.xml
+.idea
