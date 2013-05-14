@@ -1,0 +1,115 @@
+body{
+
+	font-family: 'Merriweather Sans', sans-serif;
+	/*background-image: url('../img/grey_2.png');*/
+	background-repeat: repeat;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	min-height: 100%;
+	min-width: 100%;
+	position: relative;
+	background-color: black;
+}
+
+.gradient{
+	min-height: 100%;
+	min-width: 100%;
+	position:fixed;
+	z-index: -1;
+}
+
+.gradient.color1{
+	background: radial-gradient(top left , circle cover, rgba(67,135,138,1) 0% , rgba(0,0,0,0) 70%);
+	background: -webkit-radial-gradient(top left , circle cover,  rgba(14,98,101,1) 0% , rgba(0,0,0,0) 70%);
+	background: -moz-radial-gradient(top left , circle cover,  rgba(14,98,101,1) 0% , rgba(0,0,0,0) 70%);
+}
+
+/*.gradient.color2{
+	background: linear-gradient(45deg, rgba(95,97,2,1) 0% ,rgba(0,0,0,0) 50% );
+	background: -webkit-linear-gradient(45deg, rgba(20,67,0,1) 0% ,rgba(0,0,0,0) 50%);
+}
+*/
+.gradient.color3{
+	background: radial-gradient(top right , circle cover,rgba(130,55,67,1) 0% ,rgba(0,0,0,0) 70% ) ;
+	background: -webkit-radial-gradient(top right , circle cover,rgba(130,55,67,1) 0% ,rgba(0,0,0,0) 70%);
+	background: -moz-radial-gradient(top right , circle cover,rgba(130,55,67,1) 0% ,rgba(0,0,0,0) 70%);
+
+}
+/*
+.gradient.color4{
+	background: linear-gradient(-45deg, rgba(0,0,0,0) 50%,  rgba(20,67,0,1) 100%);
+	background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,0) 50%,  rgba(20,67,0,1) 100%);
+}*/
+
+body > header{
+	box-sizing:border-box;
+	min-height: 50px;
+	min-width: 100%;
+	border-top:5px red solid;
+	position: absolute;
+	top: 0px;
+	position: fixed;
+}
+
+main{	
+	z-index: 10;
+	display: block;
+	width: 960px;
+	/* min-height: 100%; */
+	padding-top: 50px;
+	box-sizing:border-box;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+main article{
+	float: left;
+	transition-delay: 3s;
+	transition-property: all;
+	transition-timing-function: ease-in;
+	-webkit-transition: all 0.5s;
+	
+    display: inline-block;
+  	box-sizing:border-box;
+  	-moz-box-sizing: border-box;   
+  	-webkit-box-sizing: border-box; 
+	margin: 10px;
+	
+	padding: 5px;
+	border-top-style: solid;
+	border-top-width: 15px;
+	background-color: white;
+	width: 460px;
+	height: 240px;
+}
+
+main article:hover{
+	box-shadow:0px 0px 3px 3px grey;
+	
+}
+
+body > footer{
+	bottom: 0px;
+	position: fixed;
+	
+}
+
+.senape{
+	border-top-color: #FAC358;
+}
+.celeste{
+	border-top-color: #C0E2ED;
+}
+.mattone{
+	border-top-color: #D78E66;
+}
+.latte{
+	border-top-color: #FAFAE4;
+}
+.blu{
+	border-top-color: #83C0D0;
+}

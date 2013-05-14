@@ -1,0 +1,134 @@
+﻿body{
+	margin:0px;
+	text-align:center;
+	font-family: Lucida,Verdana, Arial, sans-serif,  Helvetica;
+	font-size:10px;
+	background-repeat: repeat;
+	background-image: url(./img/pattern.gif);
+}
+a,img{
+	border:0px;
+}
+
+#center{
+	margin:0px;
+	width:702px;
+	background-repeat: no-repeat;
+	margin-left:auto;
+	margin-right:auto;
+}
+#logo{
+	width:702px;
+	height:155px;
+	background-repeat: no-repeat;
+	background-image: url(./img/logo.gif);
+
+}
+#bollino{
+	position:relative;
+	top:80px;
+	left:-50px;
+	width:150px;
+	height:150px;
+	background-image:url(./img/alpha.gif);
+}
+.block *{
+	display:block;
+}
+.block {
+	padding:0px;
+	display:block;
+	width:338px;
+	height:230px;
+	overflow:hidden;
+	position:absolute;
+}
+#blocco_1{
+	top:200px;
+	left:100px;
+}
+#blocco_2{
+	top:250px;
+	left:500px;
+}
+#blocco_3{
+	top:350px;
+	left:300px;
+}
+.block_content_title{
+	width:324px;
+	height:22px;
+	position:absolute;
+	top:6px;
+	right:7px;
+	background-image: url(./img/titolo.gif);
+	color:#ffffff;
+}
+.block_content{
+	width:324px;
+	height:190px;
+	position:absolute;
+	top:32px;
+	left:7px;
+	color:#ffffff;
+}
+.sx, .bottom {
+	float:left;
+}
+.top, .sx, .dx, .bottom{
+	opacity:0.7;
+}
+
+.sx{
+	background-color:#000000;
+	border-left:1px #ffffff solid ;
+	border-right:1px #ffffff solid ;
+	padding:10px 6px 0px 6px;
+	width:324px;
+	height:200px;
+}
+/*.dx{
+	background-color:#000000;
+	border-right:1px #ffffff solid ;
+	width:6px;
+	height:auto;
+}*/
+.top{
+	background-image: url(./img/trasp_top.gif);
+	height:10px;
+	width:338px;
+}
+.bottom{
+	background-image: url(./img/trasp_bottom.gif);
+	height:10px;
+	width:338px;
+	z-index:1;
+}
+.block_top{
+	background-image: url(./img/block_top.gif);
+	height:12px;
+	width:324px;
+}
+.block_bottom{
+	background-image: url(./img/block_bottom.gif);
+	height:10px;
+	width:324px;
+}
+.block_center{
+	width:324px;
+}
+.block_top, .block_bottom, .block_center{
+	position:relative;
+	top:4px;
+	z-index:10;
+}
+#trailer,#trailer a{
+	font-size:10px;
+	color:#c5c5c5;
+	font-weight:bold;
+}
+
+
+.spazio{
+	height:81px;
+}

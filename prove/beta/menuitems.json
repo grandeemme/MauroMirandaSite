@@ -1,0 +1,20 @@
+{
+	"title": "Welcome",
+	"text": "",
+	"selected" : true,
+	"items": [{
+		"title": "About",
+		"text": "testo",
+		"items": []
+	},
+	{
+		"title": "Credits",
+		"text": "testo",
+		"items": []
+	},
+	{
+		"title": "C.V",
+		"text": "testo",
+		"items": []
+	}]
+}
