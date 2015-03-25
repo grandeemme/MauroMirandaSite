@@ -31,7 +31,7 @@ task ftp << {
         taskdef(name: 'ftp',
                 classname: 'org.apache.tools.ant.taskdefs.optional.net.FTP',
                 classpath: configurations.ftpAntTask.asPath)
-        ftp(server: ftpServer, userid: ftpUser, password:ftpPassword, remoteDir: ftpDir, verbose:"yes") {
+        ftp(server: ftpServer, userid: ftpUser, password:ftpPassword, remoteDir: ftpDir, verbose:"yes" , depends:"yes") {
             fileset(dir: "main") 
         }
     }
