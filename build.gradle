@@ -1,15 +1,19 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:0.4'
-    }
+apply plugin: 'com.eltrino.gradle.php'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+plugins {
+  id "com.eriwen.gradle.js" version "1.12.1"
 }
 
 
-dependencies {
-   
+buildscript {
+   dependencies {
+      classpath group: 'com.eltrino.gradle', name: 'php-plugin', version: '1.0'
+    }
 }
 
 configurations {
@@ -17,9 +21,18 @@ configurations {
 }
 
 dependencies {
-    ftpAntTask("org.apache.ant:ant-commons-net:1.8.4") {
-        module("commons-net:commons-net:1.4.1") {
+    ftpAntTask("org.apache.ant:ant-commons-net:1.9.4") {
+        module("commons-net:commons-net:3.3") {
             dependencies "oro:oro:2.0.8:jar"
+        }
+    }
+}
+
+sourceSets {
+    main {
+        php {
+            srcDir '.'
+            include '**/*.php'
         }
     }
 }
@@ -29,10 +42,8 @@ task ftp << {
         taskdef(name: 'ftp',
                 classname: 'org.apache.tools.ant.taskdefs.optional.net.FTP',
                 classpath: configurations.ftpAntTask.asPath)
-        ftp(server: "(removed)", userid: "(removed)", password: "(removed)", remoteDir: "(removed)") {
-            fileset(dir: "(removed)") {
-                include(name: "(removed)")
-            }
+        ftp(server: ftpServer, userid: ftpUser, password:ftpPassword, remoteDir: ftpDir) {
+            fileset(dir: "main") 
         }
     }
 }
