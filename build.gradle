@@ -6,14 +6,11 @@ repositories {
 
 
 buildscript {
-     
     repositories {
     	mavenCentral()
     	mavenLocal()
 	}
 }
-
-
 
 configurations {
     ftpAntTask
@@ -28,11 +25,13 @@ dependencies {
 }
 
 task ftp << {
+	println ftpServer
+    println ftpUser
     ant {
         taskdef(name: 'ftp',
                 classname: 'org.apache.tools.ant.taskdefs.optional.net.FTP',
                 classpath: configurations.ftpAntTask.asPath)
-        ftp(server: ftpServer, userid: ftpUser, password:ftpPassword, remoteDir: ftpDir) {
+        ftp(server: ftpServer, userid: ftpUser, password:ftpPassword, remoteDir: ftpDir, verbose:"yes") {
             fileset(dir: "main") 
         }
     }
