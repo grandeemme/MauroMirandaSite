@@ -14,11 +14,12 @@
 						<configuration>
 							<tasks>
 								<ftp
-									server="ftp.apache.org"
-									remotedir="incoming"
-									userid="anonymous"
-									password="me@myorg.com"
-									depends="yes">
+									server="${ftp.server}"
+									remotedir="${ftp.path}"
+									userid="${ftp.user}"
+									password="${ftp.password}"
+									depends="yes"
+									verbose="yes">
 									<fileset dir="main/" />
 								</ftp>
 							</tasks>
